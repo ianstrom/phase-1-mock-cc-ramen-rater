@@ -43,6 +43,13 @@ function addNewRamen() {
             "rating": inputRating.value,
             "comment": inputComment.value,
         }
+        fetch('http://localhost:3000/ramens', {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body: JSON.stringify( {newRamen} )
+        })
         let img = document.createElement('img')
         img.src = newRamen.image
         menu.append(img)
@@ -51,4 +58,3 @@ function addNewRamen() {
         })
     })
 }
-
