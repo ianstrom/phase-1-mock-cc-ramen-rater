@@ -48,7 +48,7 @@ function addNewRamen() {
             headers: {
                 "Content-Type": 'application/json'
             },
-            body: JSON.stringify( {newRamen} )
+            body: JSON.stringify(newRamen)
         })
         let img = document.createElement('img')
         img.src = newRamen.image
